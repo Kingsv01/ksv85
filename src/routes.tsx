@@ -1,34 +1,25 @@
-import { FC } from "react";
-import { Routes, Route } from "react-router";
+import type { FC } from "react";
+import { Route, Routes, HashRouter } from "react-router";
+import { Login } from "./components/Login";
+import { Info } from "./components/Info";
+import { User } from "./components/User";
+import { Users } from "./components/Users";
+import { Todos } from "./components/Todos";
+import { Posts } from "./components/Posts";
 import App from "./App";
-import { Login } from "./components/pages/Login";
-import { Dashboard } from "./components/pages/Dashboard";
-import { Settings } from "./components/pages/Settings";
-import { PrivateRoute } from "./components/utils/PrivateRoute";
-import { Counter } from "./components/Counter";
 
 export const AppRoutes: FC = () => {
   return (
-    <Routes>
-      <Route index element={<App />} />
-      <Route path="/counter" element={<Counter />} />
-      <Route path="/login" element={<Login />} />
-      <Route
-        path="/dashboard"
-        element={
-          <PrivateRoute>
-            <Dashboard />
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="/dashboard/settings"
-        element={
-          <PrivateRoute>
-            <Settings />
-          </PrivateRoute>
-        }
-      />
-    </Routes>
+    <HashRouter>
+      <Routes>
+        <Route index element={<App />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/info" element={<Info />} />
+        <Route path="/info/user" element={<User />} />
+        <Route path="/info/users" element={<Users />} />
+        <Route path="/info/todos" element={<Todos />} />
+        <Route path="/info/posts" element={<Posts />} />
+      </Routes>
+    </HashRouter>
   );
 };

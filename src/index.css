@@ -4,6 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,17 +28,6 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  transition: 0.3s all;
-}
-
-body.dark {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-}
-
-body.light {
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
 }
 
 h1 {
@@ -74,4 +65,38 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.card-wrapper {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  width: 250px;
+  min-height: 70px;
+  padding: 20px;
+  background-color: #242424;
+  border: 1px solid #242424;
+  border-radius: 5px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: 0.2s ease, 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+}
+
+.card h4 {
+  margin: 0;
+  color: #666;
+}
+
+.card p {
+  color: #666;
 }
