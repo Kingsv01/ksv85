@@ -31,7 +31,6 @@ type ActionType<T = unknown> = {
   payload: T;
 };
 
-//  @ts-expect-error Dev-only impact
 export const enum ActionTypes {
   userLogin = "USER_LOGIN",
   userLogout = "USER_LOGOUT",
