@@ -22,5 +22,9 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "scripts": {
+    "prebuild": "chmod +x node_modules/.bin/vite",
+    "build": "tsc -b && vite build"
+  }
 }
